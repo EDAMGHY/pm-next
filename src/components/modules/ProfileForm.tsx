@@ -37,11 +37,13 @@ export const ProfileForm = () => {
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
+    //eslint-disable-next-line
     console.log(values);
     toast.success("Event has been created", {
       description: JSON.stringify(values, null, 2),
       action: {
         label: "Undo",
+        //eslint-disable-next-line
         onClick: () => console.log("Undo"),
       },
     });
